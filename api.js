@@ -17,6 +17,8 @@ var server = http.createServer(function (req, res) {
     proxy.web(req, res, {
         changeOrigin: true,
         target: 'https://us-central1-xtrafinance.cloudfunctions.net'
+    }, (e) => {
+        console.log('err ', console.log(e));
     });
 });
 
