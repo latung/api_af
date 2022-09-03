@@ -16,7 +16,7 @@ var server = http.createServer(function (req, res) {
     // and then proxy the request.
     proxy.web(req, res, {
         changeOrigin: true,
-        target: 'https://us-central1-safaty-e20ba.cloudfunctions.net/sfm_getNfts'
+        target: 'https://us-central1-safaty-e20ba.cloudfunctions.net'
     }, (e) => {
         console.log('err ', console.log(e));
     });
